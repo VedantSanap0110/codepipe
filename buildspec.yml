@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install --upgrade awscli # Only upgrade AWS CLI
+  build:
+    commands:
+      - zip function.zip lambda_function.py # Zip the lambda function
+      - aws lambda update-function-code --function-name ImageDetectorLambda --zip-file fileb://function.zip # Update the lambda function code
