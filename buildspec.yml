@@ -7,4 +7,4 @@ phases:
   build:
     commands:
       - zip function.zip lambda_function.py # Zip the lambda function
-      - aws lambda update-function-code --function-name ImageDetectorLambda --zip-file fileb://function.zip # Update the lambda function code
+      - aws lambda update-function-code --function-name ImageProcessingLambda --zip-file fileb://function.zip # Update the lambda function code
